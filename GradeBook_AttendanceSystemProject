@@ -20,8 +20,9 @@ class Student {
 		}
 	}*/	
 	
-	void attendanceSystem(){
-		
+	boolean attendanceSystem(boolean tableInitial){
+		boolean tableFinal = tableInitial;
+		return tableFinal;
 	}
 }
 public class Grade_AttendanceSystem {
@@ -29,8 +30,12 @@ public class Grade_AttendanceSystem {
 		Student student1 = new Student();
 		student1.attendanceSystem();
 		
-		Scanner decision = Scanner(System.in);
+		Scanner decision = new Scanner(System.in);
 		System.out.println("Do you want to edit the attendance system? If yes, answer true. If no, answer false.");
 		boolean edit = decision.nextBoolean();
+		
+		if (edit) {
+			attendanceSystem(table);
+		}
 	}
 }
