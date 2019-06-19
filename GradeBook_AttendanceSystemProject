@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import java.util.Arrays;
 
 class Student {
@@ -7,23 +8,29 @@ class Student {
 	double grade;
 	char letterGrade;
 	
+	boolean table [] [] = new boolean [6] [5];
+	
+	Arrays.fill(table, true);
+	
+	System.out.println(table [3] [4]);
+	
+	/*for (int i = 0; i < 6; i++) {
+		for (int j = 0; j < 5, j++ ) {
+			table [i] [j] = true;
+		}
+	}*/	
+	
 	void attendanceSystem(){
-		boolean table [] [] = new boolean [6] [5];
 		
-		Arrays.fill(table, true);
-		
-		System.out.println(table [3] [4]);
-		
-		/*for (int i = 0; i < 6; i++) {
-			for (int j = 0; j < 5, j++ ) {
-				table [i] [j] = true;
-			}
-		}*/
 	}
 }
 public class Grade_AttendanceSystem {
 	public static void main (String args[]) {
 		Student student1 = new Student();
 		student1.attendanceSystem();
+		
+		Scanner decision = Scanner(System.in);
+		System.out.println("Do you want to edit the attendance system? If yes, answer true. If no, answer false.");
+		boolean edit = decision.nextBoolean();
 	}
 }
