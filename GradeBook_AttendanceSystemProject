@@ -1,0 +1,29 @@
+import java.util.Arrays;
+
+class Student {
+	int numAtt;
+	int numTardies;
+	int numAbs;
+	double grade;
+	char letterGrade;
+	
+	void attendanceSystem(){
+		boolean table [] [] = new boolean [6] [5];
+		
+		Arrays.fill(table, true);
+		
+		System.out.println(table [3] [4]);
+		
+		/*for (int i = 0; i < 6; i++) {
+			for (int j = 0; j < 5, j++ ) {
+				table [i] [j] = true;
+			}
+		}*/
+	}
+}
+public class Grade_AttendanceSystem {
+	public static void main (String args[]) {
+		Student student1 = new Student();
+		student1.attendanceSystem();
+	}
+}
