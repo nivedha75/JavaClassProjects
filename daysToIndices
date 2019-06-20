@@ -1,0 +1,15 @@
+int dayNum = 0;
+				
+				if (dayG.equalsIgnoreCase("Monday")) {
+					dayNum = 0;
+				} else if (dayG.equalsIgnoreCase("Tuesday")) {
+					dayNum = 1;
+				} else if (dayG.equalsIgnoreCase("Wednesday")) {
+					dayNum = 2;
+				} else if (dayG.equalsIgnoreCase("Thursday")) {
+					dayNum = 3;
+				} else if (dayG.equalsIgnoreCase("Friday")) {
+					dayNum = 4;
+				} else {
+					System.out.println("Invalid day. Try again.");
+				}
