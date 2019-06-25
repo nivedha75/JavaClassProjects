@@ -1,0 +1,40 @@
+public static void avgGrade(int studentID) {
+		double countGrade = 0.0;
+		double average = 0.0;
+		double sum = 0.0;
+		char letter = 'A';
+		for (int i = 0; i < 18; i++) {
+			Student tempStudent = studentList.get(i);
+			if (tempStudent.ID == studentID) {
+				for (int x = 0; x < tempStudent.gradeT.length; x++) {// row
+
+					for (int y = 0; y < tempStudent.gradeT[x].length; y++) {// column
+
+						sum += tempStudent.gradeT[x][y];
+						if(tempStudent.gradeT[x][y] != 0.0) {
+							countGrade++;
+						}
+					}
+				}//need a countrGrade that is edit something new implement(solves 0)
+				average = sum / countGrade;
+				if (countGrade == 0.0) {
+					System.out.println("Grade: 100%  A");
+					
+				} else {
+					if (average >= 90) {
+						letter = 'A';
+					} else if (average >= 80) {
+						letter = 'B';
+					} else if (average >= 70) {
+						letter = 'C';
+					} else if (average >= 60) {
+						letter = 'D';
+					} else {
+						letter = 'F';
+					}
+					
+					System.out.println("Grade: " + average + "%  " + letter);
+				}
+				break;
+			}
+		}
