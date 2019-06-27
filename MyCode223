@@ -1,0 +1,558 @@
+import java.util.Scanner;
+import java.util.Random;
+import java.util.Arrays;
+public class Example {
+		
+	    public static void main (String[] args){
+	        int studentname=0;
+	    	int student1=1;
+	    	int student2=2;
+	    	int student3=3;
+	    	int student4=4;
+	    	int student5=5;
+	    	int student6=6;
+	    	int student7=7;
+	    	int student8=8;
+	    	int student9=9;
+	    	int student10=10;
+	    	int student11=11;
+	    	int student12=12;
+	    	int student13=13;
+	    	int student14=14;
+	    	int student15=15;
+	    	int student16=16;
+	    	int student17=17;
+	    	int student18=18;
+	    	System.out.println("Here are the IDs for each of the students: ");
+	    	System.out.println("student1=1");
+	    	System.out.println("student2=2");
+	    	System.out.println("student3=3");
+	    	System.out.println("student4=4");
+	    	System.out.println("student5=5");
+	    	System.out.println("student6=6");
+	    	System.out.println("student7=7");
+	    	System.out.println("You know the rest...");
+	    	String week1att[][] = {{"Days: ","M","T","W","Th","F"},{"Akshat","P","P","P","P","P"},{"Stu_1","P","P","P","P","P"},{"Stu_2","P","P","P","P","P"},{"Stu_3","P","P","P","P","P"},{"Stu_4","P","P","P","P","P"},{"Stu_5","P","P","P","P","P"},{"Stu_6","P","P","P","P","P"},{"Stu_7","P","P","P","P","P"},{"Stu_8","P","P","P","P","P"},{"Stu_9","P","P","P","P","P"},{"Stu_10","P","P","P","P","P"},{"Stu_11","P","P","P","P","P"},{"Stu_12","P","P","P","P","P"},{"Stu_13","P","P","P","P","P"},{"Stu_14","P","P","P","P","P"},{"Stu_15","P","P","P","P","P"},{"Stu_16","P","P","P","P","P"},{"Stu_17","P","P","P","P","P"},{"Stu_18","P","P","P","P","P"}};
+	    	String gradeOverall[][]={{"Stdnt: ","S1","S2","S3","S4","S5","S6","S7","S8","S9","S10","S11","S12","S13","S14","S15","S16","S17","S18"},{"Lab1","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab2","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab3","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab4","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab5","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab6","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab7","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab8","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab9","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab10","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab11","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab12","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab13","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab14","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab15","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Average","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"}};
+	    	int counter=0;
+	    	int counterwhole=0;
+	    	int countercounter=0;
+	    	int counterAttA=0;
+	    	int counterAttT=0;
+	    	int counterW;
+	    	double counter112=0;
+	    	int counter221=0;
+	    	double TotalTotal=0;
+	    	int i;
+	    	int w;
+	    	int k;
+	    	int sum;
+	    	String nameString="";
+	    	Scanner scan=new Scanner(System.in);
+	    	Random Rand= new Random();
+	    	int randomPercentage=1+Rand.nextInt(100);
+	    	String AverageArray[];
+	    	System.out.println("Hello, what is your name?");
+	    	String name= scan.nextLine();
+	    	
+	    	
+	    	while (counterwhole==0){
+	    		
+	    	
+	    		
+	    	
+	    	
+	    		Scanner q1=new Scanner(System.in);
+	    	System.out.println(name+", would you like to access the attendance or the gradebook?");
+	    	System.out.println("Push 1 for the attendance or 2 for the gradebook, or choose 3 to view the attendance and gradebook format");
+	    	
+	    	int choose=scan.nextInt();
+	    	
+	    	
+	    	if (choose==3){
+	    		System.out.println("This is how grading is being formatted: ");
+	    		display(gradeOverall);
+	    		System.out.println("This is how attendance is formatted: ");
+	    		display(week1att);
+	    		
+	    	}
+	    	
+	    	
+	    	
+	    	
+	    	
+	    	
+	    	
+	    	if (choose==1){
+	    		Scanner attaccess=new Scanner(System.in);
+	    		System.out.println("Choose which weeks attendance you would like to access");
+	    		int attaccessread=attaccess.nextInt();
+	    		
+	    	
+	    		    //add more weeks
+	    			String week7att[][] = {{"Days: ","M","T","W","Th","F"},{"Akshat","P","P","P","P","P"},{"Stu_1","P","P","P","P","P"},{"Stu_2","P","P","P","P","P"},{"Stu_3","P","P","P","P","P"},{"Stu_4","P","P","P","P","P"},{"Stu_5","P","P","P","P","P"},{"Stu_6","P","P","P","P","P"},{"Stu_7","P","P","P","P","P"},{"Stu_8","P","P","P","P","P"},{"Stu_9","P","P","P","P","P"},{"Stu_10","P","P","P","P","P"},{"Stu_11","P","P","P","P","P"},{"Stu_12","P","P","P","P","P"},{"Stu_13","P","P","P","P","P"},{"Stu_14","P","P","P","P","P"},{"Stu_15","P","P","P","P","P"},{"Stu_16","P","P","P","P","P"},{"Stu_17","P","P","P","P","P"},{"Stu_18","P","P","P","P","P"}};
+	    			String week2att[][] = {{"Days: ","M","T","W","Th","F"},{"Akshat","P","P","P","P","P"},{"Stu_1","P","P","P","P","P"},{"Stu_2","P","P","P","P","P"},{"Stu_3","P","P","P","P","P"},{"Stu_4","P","P","P","P","P"},{"Stu_5","P","P","P","P","P"},{"Stu_6","P","P","P","P","P"},{"Stu_7","P","P","P","P","P"},{"Stu_8","P","P","P","P","P"},{"Stu_9","P","P","P","P","P"},{"Stu_10","P","P","P","P","P"},{"Stu_11","P","P","P","P","P"},{"Stu_12","P","P","P","P","P"},{"Stu_13","P","P","P","P","P"},{"Stu_14","P","P","P","P","P"},{"Stu_15","P","P","P","P","P"},{"Stu_16","P","P","P","P","P"},{"Stu_17","P","P","P","P","P"},{"Stu_18","P","P","P","P","P"}};
+	    			String week3att[][] = {{"Days: ","M","T","W","Th","F"},{"Akshat","P","P","P","P","P"},{"Stu_1","P","P","P","P","P"},{"Stu_2","P","P","P","P","P"},{"Stu_3","P","P","P","P","P"},{"Stu_4","P","P","P","P","P"},{"Stu_5","P","P","P","P","P"},{"Stu_6","P","P","P","P","P"},{"Stu_7","P","P","P","P","P"},{"Stu_8","P","P","P","P","P"},{"Stu_9","P","P","P","P","P"},{"Stu_10","P","P","P","P","P"},{"Stu_11","P","P","P","P","P"},{"Stu_12","P","P","P","P","P"},{"Stu_13","P","P","P","P","P"},{"Stu_14","P","P","P","P","P"},{"Stu_15","P","P","P","P","P"},{"Stu_16","P","P","P","P","P"},{"Stu_17","P","P","P","P","P"},{"Stu_18","P","P","P","P","P"}};
+	    			String week4att[][] = {{"Days: ","M","T","W","Th","F"},{"Akshat","P","P","P","P","P"},{"Stu_1","P","P","P","P","P"},{"Stu_2","P","P","P","P","P"},{"Stu_3","P","P","P","P","P"},{"Stu_4","P","P","P","P","P"},{"Stu_5","P","P","P","P","P"},{"Stu_6","P","P","P","P","P"},{"Stu_7","P","P","P","P","P"},{"Stu_8","P","P","P","P","P"},{"Stu_9","P","P","P","P","P"},{"Stu_10","P","P","P","P","P"},{"Stu_11","P","P","P","P","P"},{"Stu_12","P","P","P","P","P"},{"Stu_13","P","P","P","P","P"},{"Stu_14","P","P","P","P","P"},{"Stu_15","P","P","P","P","P"},{"Stu_16","P","P","P","P","P"},{"Stu_17","P","P","P","P","P"},{"Stu_18","P","P","P","P","P"}};
+	    			String week5att[][] = {{"Days: ","M","T","W","Th","F"},{"Akshat","P","P","P","P","P"},{"Stu_1","P","P","P","P","P"},{"Stu_2","P","P","P","P","P"},{"Stu_3","P","P","P","P","P"},{"Stu_4","P","P","P","P","P"},{"Stu_5","P","P","P","P","P"},{"Stu_6","P","P","P","P","P"},{"Stu_7","P","P","P","P","P"},{"Stu_8","P","P","P","P","P"},{"Stu_9","P","P","P","P","P"},{"Stu_10","P","P","P","P","P"},{"Stu_11","P","P","P","P","P"},{"Stu_12","P","P","P","P","P"},{"Stu_13","P","P","P","P","P"},{"Stu_14","P","P","P","P","P"},{"Stu_15","P","P","P","P","P"},{"Stu_16","P","P","P","P","P"},{"Stu_17","P","P","P","P","P"},{"Stu_18","P","P","P","P","P"}};
+	    			String week6att[][] = {{"Days: ","M","T","W","Th","F"},{"Akshat","P","P","P","P","P"},{"Stu_1","P","P","P","P","P"},{"Stu_2","P","P","P","P","P"},{"Stu_3","P","P","P","P","P"},{"Stu_4","P","P","P","P","P"},{"Stu_5","P","P","P","P","P"},{"Stu_6","P","P","P","P","P"},{"Stu_7","P","P","P","P","P"},{"Stu_8","P","P","P","P","P"},{"Stu_9","P","P","P","P","P"},{"Stu_10","P","P","P","P","P"},{"Stu_11","P","P","P","P","P"},{"Stu_12","P","P","P","P","P"},{"Stu_13","P","P","P","P","P"},{"Stu_14","P","P","P","P","P"},{"Stu_15","P","P","P","P","P"},{"Stu_16","P","P","P","P","P"},{"Stu_17","P","P","P","P","P"},{"Stu_18","P","P","P","P","P"}};
+	    			
+	    			
+	    			
+	    			
+	    			
+	    			
+	    			
+	    			
+	    			
+	    			
+	    			
+	    			
+	    			
+	    			
+	    			
+	    			
+	    			
+	    			
+	    			
+	    			
+	    			
+	    			
+	    			if (attaccessread==6){
+		    			System.out.println("Student Attendance Week 6: ");
+		    			display(week6att);
+		    			//while (counter==0){
+		    				Scanner editedit1=new Scanner(System.in);
+		    				System.out.println("Would you like to edit the code, 1=Yes, 2=No");
+		    				int editeditread1=editedit1.nextInt();
+		    				if (editeditread1==2){
+		    					System.out.println("Ok, no fun then...");
+		    					counterwhole++;
+		    					
+		    					
+		    					
+		    				}
+		    				if (editeditread1==1){
+		    					Scanner whatname1=new Scanner(System.in);
+			    				System.out.println("What is the student's ID you would like to access");
+			    				int ID1=whatname1.nextInt();
+			    				for (i=0;i<18;i++){
+			    					if (i==ID1){
+			    						System.out.println("The value of the ID you typed is "+i);
+			    	        			Scanner day1=new Scanner(System.in);
+			    	        			System.out.println("Enter the day that you would like to change the attendance for, 1=Mon, 2=Tue, 3=Wed, 4=Thu, 5=Fri");
+			    	        			int a=day1.nextInt();
+			    	        			Scanner TardyOrAbsent1=new Scanner (System.in);
+			    	        			System.out.println("Would you like to mark him Tardy or Absent, 1=Absent 2=Tardy");
+			    	        			int scanTarorAb1=TardyOrAbsent1.nextInt();
+			    	        			if (scanTarorAb1==1){
+			    	        				week6att[i][a]="A";
+			    	        			
+			    	        				display(week6att);
+			    	        				counterAttA++;
+			    	        				System.out.println("You marked "+counterAttA+" people absent");
+				    			    		System.out.println("You marked "+counterAttT+" people tardy");
+			    	        				if (scanTarorAb1==2){
+					    	        			week6att[i][a]="T";
+					    	        			display(week6att);
+					    	        			counterAttT++;
+					    	        			System.out.println("You marked "+counterAttA+" people absent");
+					    			    		System.out.println("You marked "+counterAttT+" people tardy");
+					    	        			
+				    	        			
+				    	        			}
+			    	        				Scanner exit=new Scanner(System.in);
+			    	        				System.out.println("Would you like to exit the program, 1=Yes 2=No");
+			    	        				int exitScan=exit.nextInt();
+			    	  
+			    	        				if (exitScan==1){
+			    	        					
+			    	        					System.out.println("Terminated.");
+			    	        					counterwhole++;
+			    	        					
+			    	        				}else {
+			    	        					counterwhole = 0;
+			    	        				}
+			    	        				
+			    	        				
+			    	        			}
+			    	        			
+			    	        				
+			    					}
+			    				}
+		    				}
+		    				
+		    			//}
+		    		}
+	    			if (attaccessread==5){
+		    			System.out.println("Student Attendance Week 5: ");
+		    			display(week5att);
+		    			while (counter==0){
+		    				Scanner editedit1=new Scanner(System.in);
+		    				System.out.println("Would you like to edit the code, 1=Yes, 2=No");
+		    				int editeditread1=editedit1.nextInt();
+		    				if (editeditread1==2){
+		    					System.out.println("Ok, no fun then...");
+		    					counterwhole++;
+		    					
+		    					
+		    					
+		    				}
+		    				if (editeditread1==1){
+		    					Scanner whatname1=new Scanner(System.in);
+			    				System.out.println("What is the student's ID you would like to access");
+			    				int ID1=whatname1.nextInt();
+			    				for (i=0;i<18;i++){
+			    					if (i==ID1){
+			    						System.out.println("The value of the ID you typed is "+i);
+			    	        			Scanner day1=new Scanner(System.in);
+			    	        			System.out.println("Enter the day that you would like to change the attendance for, 1=Mon, 2=Tue, 3=Wed, 4=Thu, 5=Fri");
+			    	        			int a=day1.nextInt();
+			    	        			Scanner TardyOrAbsent1=new Scanner (System.in);
+			    	        			System.out.println("Would you like to mark him Tardy or Absent, 1=Absent 2=Tardy");
+			    	        			int scanTarorAb1=TardyOrAbsent1.nextInt();
+			    	        			if (scanTarorAb1==1){
+			    	        				week5att[i][a]="A";
+			    	        			
+			    	        				display(week5att);
+			    	        				counterAttA++;
+			    	        				System.out.println("You marked "+counterAttA+" people absent");
+				    			    		System.out.println("You marked "+counterAttT+" people tardy");
+			    	        			}
+			    	        			if (scanTarorAb1==2){
+				    	        			week5att[i][a]="T";
+				    	        			display(week5att);
+				    	        			counterAttT++;
+				    	        			System.out.println("You marked "+counterAttA+" people absent");
+				    			    		System.out.println("You marked "+counterAttT+" people tardy");
+				    	        			}
+			    	        				
+			    					}
+			    				}
+		    				}
+		    				
+		    			}
+		    		}
+	    			
+	    			if (attaccessread==4){
+		    			System.out.println("Student Attendance Week 4: ");
+		    			display(week4att);
+		    			while (counter==0){
+		    				Scanner editedit1=new Scanner(System.in);
+		    				System.out.println("Would you like to edit the code, 1=Yes, 2=No");
+		    				int editeditread1=editedit1.nextInt();
+		    				if (editeditread1==2){
+		    					System.out.println("Ok, no fun then...");
+		    					counter++;
+		    					
+		    					
+		    					
+		    				}
+		    				if (editeditread1==1){
+		    					Scanner whatname1=new Scanner(System.in);
+			    				System.out.println("What is the student's ID you would like to access");
+			    				int ID1=whatname1.nextInt();
+			    				for (i=0;i<18;i++){
+			    					if (i==ID1){
+			    						System.out.println("The value of the ID you typed is "+i);
+			    	        			Scanner day1=new Scanner(System.in);
+			    	        			System.out.println("Enter the day that you would like to change the attendance for, 1=Mon, 2=Tue, 3=Wed, 4=Thu, 5=Fri");
+			    	        			int a=day1.nextInt();
+			    	        			Scanner TardyOrAbsent1=new Scanner (System.in);
+			    	        			System.out.println("Would you like to mark him Tardy or Absent, 1=Absent 2=Tardy");
+			    	        			int scanTarorAb1=TardyOrAbsent1.nextInt();
+			    	        			if (scanTarorAb1==1){
+			    	        				week3att[i][a]="A";
+			    	        			
+			    	        				display(week4att);
+			    	        				counterAttA++;
+			    	        				System.out.println("You marked "+counterAttA+" people absent");
+				    			    		System.out.println("You marked "+counterAttT+" people tardy");
+			    	        			}
+			    	        			if (scanTarorAb1==2){
+				    	        			week3att[i][a]="T";
+				    	        			display(week4att);
+				    	        			counterAttT++;
+				    	        			System.out.println("You marked "+counterAttA+" people absent");
+				    			    		System.out.println("You marked "+counterAttT+" people tardy");
+				    	        			}
+			    	        				
+			    					}
+			    				}
+		    				}
+		    				
+		    			}
+		    		}
+	    			
+	    			
+	    			
+	    			if (attaccessread==3){
+	    			System.out.println("Student Attendance Week 3: ");
+	    			display(week3att);
+	    			while (counter==0){
+	    				Scanner editedit1=new Scanner(System.in);
+	    				System.out.println("Would you like to edit the code, 1=Yes, 2=No");
+	    				int editeditread1=editedit1.nextInt();
+	    				if (editeditread1==2){
+	    					System.out.println("Ok, no fun then...");
+	    					counter++;
+	    					
+	    					
+	    					
+	    				}
+	    				if (editeditread1==1){
+	    					Scanner whatname1=new Scanner(System.in);
+		    				System.out.println("What is the student's ID you would like to access");
+		    				int ID1=whatname1.nextInt();
+		    				for (i=0;i<18;i++){
+		    					if (i==ID1){
+		    						System.out.println("The value of the ID you typed is "+i);
+		    	        			Scanner day1=new Scanner(System.in);
+		    	        			System.out.println("Enter the day that you would like to change the attendance for, 1=Mon, 2=Tue, 3=Wed, 4=Thu, 5=Fri");
+		    	        			int a=day1.nextInt();
+		    	        			Scanner TardyOrAbsent1=new Scanner (System.in);
+		    	        			System.out.println("Would you like to mark him Tardy or Absent, 1=Absent 2=Tardy");
+		    	        			int scanTarorAb1=TardyOrAbsent1.nextInt();
+		    	        			if (scanTarorAb1==1){
+		    	        				week3att[i][a]="A";
+		    	        			
+		    	        				display(week3att);
+		    	        				counterAttA++;
+		    	        				System.out.println("You marked "+counterAttA+" people absent");
+			    			    		System.out.println("You marked "+counterAttT+" people tardy");
+		    	        			}
+		    	        			if (scanTarorAb1==2){
+			    	        			week3att[i][a]="T";
+			    	        			display(week3att);
+			    	        			counterAttT++;
+			    	        			System.out.println("You marked "+counterAttA+" people absent");
+			    			    		System.out.println("You marked "+counterAttT+" people tardy");
+			    	        			}
+		    	        				
+		    					}
+		    				}
+	    				}
+	    				
+	    			}
+	    		}
+	    			
+	    		if (attaccessread==2){
+	    			System.out.println("Student Attendance Week 2: ");
+	    			display(week2att);
+	    			while (counter==0){
+	    			Scanner editedit1=new Scanner(System.in);
+	    			System.out.println("Would you like to edit the code, 1=Yes, 2=No");
+	    			int editeditread1=editedit1.nextInt();
+	    			if (editeditread1==2){
+	    				System.out.println("Ok then...");
+	    				counterwhole++;
+	    				
+	    			}
+	    			if (editeditread1==1){
+	    				Scanner whatname1=new Scanner(System.in);
+	    				System.out.println("What is the student's ID you would like to access");
+	    				int ID1=whatname1.nextInt();
+	    				for (i=0;i<18;i++){
+	    					if (i==ID1){
+	    						System.out.println("The value of the ID you typed is "+i);
+	    	        			Scanner day1=new Scanner(System.in);
+	    	        			System.out.println("Enter the day that you would like to change the attendance for, 1=Mon, 2=Tue, 3=Wed, 4=Thu, 5=Fri");
+	    	        			int a=day1.nextInt();
+	    	        			Scanner TardyOrAbsent1=new Scanner (System.in);
+	    	        			System.out.println("Would you like to mark him Tardy or Absent, 1=Absent 2=Tardy");
+	    	        			int scanTarorAb1=TardyOrAbsent1.nextInt();
+	    	        			if (scanTarorAb1==1){
+	    	        				week2att[i][a]="A";
+	    	        				display(week2att);
+	    	        				counterAttA++;
+	    	        				System.out.println("You marked "+counterAttA+" people absent");
+		    			    		System.out.println("You marked "+counterAttT+" people tardy");
+	    	        			}	
+	    	        			if (scanTarorAb1==2){
+	    	        				week2att[i][a]="T";
+	    	        				display(week2att);
+	    	        				counterAttT++;
+	    	        				System.out.println("You marked "+counterAttA+" people absent");
+		    			    		System.out.println("You marked "+counterAttT+" people tardy");
+	    	        			}
+	    	        			
+	    	        			
+	    					}
+	    				}
+	    			}
+	    			}
+	    		}
+	    			
+	    		if (attaccessread==1){
+	    			System.out.println("Student Attendance Week 1: ");
+	    	        display(week1att);
+	    	        while (counter==0){
+	    	        Scanner editedit=new Scanner(System.in);
+	    	        System.out.println("Would you like to edit the code, 1=Yes, 2=No");
+	    	        int editeditread=editedit.nextInt();   //edit week one
+	    	        if (editeditread==2){
+	    	        	System.out.println("Ok. No changing peoples attendance and making them mad I guess");
+	    	        	counter++;
+	    	        }
+	    	        if (editeditread==1){ //look at this
+	    	        	Scanner whatname=new Scanner(System.in);
+	    	        	System.out.println("What is the student's ID you would like to access");
+	    	        	int ID=whatname.nextInt();
+	    	        	for (i=0;i<18;i++){
+	    	        		if (i==ID){
+	    	        			System.out.println("The value of the ID you typed is "+i);
+	    	        			Scanner day=new Scanner(System.in);
+	    	        			System.out.println("Enter the day that you would like to change the attendance for, 1=Mon, 2=Tue, 3=Wed, 4=Thu, 5=Fri");
+	    	        			int j=day.nextInt();
+	    	        			Scanner TardyOrAbsent=new Scanner (System.in);
+	    	        			System.out.println("Would you like to mark him Tardy or Absent, 1=Absent 2=Tardy");
+	    	        			int scanTarorAb=TardyOrAbsent.nextInt();
+	    	        			if (scanTarorAb==1){
+	    	        				week1att[i][j] = "A";
+		    	        			display(week1att);
+		    	        			counterAttA++;
+		    	        			System.out.println("You marked "+counterAttA+" people absent");
+		    			    		System.out.println("You marked "+counterAttT+" people tardy");
+	    	        			}
+	    	        			
+	    	        			if (scanTarorAb==2){
+	    	        				week1att[i][j]="T";
+	    	        				display(week1att);
+	    	        				counterAttT++;
+	    	        				System.out.println("You marked "+counterAttA+" people absent");
+		    			    		System.out.println("You marked "+counterAttT+" people tardy");
+	    	        				
+	    	        			}
+	    	        			}
+	    	        			
+	    	        			
+	    	        		}
+    	        		}		
+	    	  
+	    	        		}
+	    	        	}
+	    	}
+	    	      	//String weeklatt[ID][];
+	    		while (countercounter==0){
+	    			
+	    		
+	    	        		  if (choose==2){     //START OF GRADEBOOOK CODE
+	    	        			String gradeOverall2[][]={{"Stdnt: ","S1","S2","S3","S4","S5","S6","S7","S8","S9","S10","S11","S12","S13","S14","S15","S16","S17","S18"},{"Lab1","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab2","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab3","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab4","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab5","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab6","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab7","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab8","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab9","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab10","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab11","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab12","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab13","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab14","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Lab15","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"},{"Average","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"}};
+	    	        		
+	    	        			display (gradeOverall);
+	    	        			
+	    	        			//int gradeOverall3[][]={{
+								while (counter221==0){
+								Scanner editedit=new Scanner(System.in);
+								System.out.println("Would you like to edit the code 1=Yes 2=No.");
+								int editeditread=editedit.nextInt();
+								if (editeditread==2){
+				    	        	System.out.println("Ok. No changing peoples grades and failing them mad I guess");
+				    	        	counter221++;
+				    	        }
+								if(editeditread==1){
+									countercounter++;
+									Scanner whatname=new Scanner(System.in);
+				    	        	System.out.println("What is the student's ID you would like to access");
+				    	        	int ID=whatname.nextInt();
+				    	        	for (i=0;i<18;i++){
+				    	        		if (i==ID){
+				    	        			
+				    	        			double ArrayStore[][]={{1,0.0,0.0,0.0,0.0,0.0,0.0},{2,0.0,0.0,0.0,0.0,0.0,0.0},{3,0.0,0.0,0.0,0.0,0.0,0.0},{4,0.0,0.0,0.0,0.0,0.0,0.0},{5,0.0,0.0,0.0,0.0,0.0,0.0},{6,0.0,0.0,0.0,0.0,0.0,0.0},{7,0.0,0.0,0.0,0.0,0.0,0.0},{8,0.0,0.0,0.0,0.0,0.0,0.0},{9,0.0,0.0,0.0,0.0,0.0,0.0},{10,0.0,0.0,0.0,0.0,0.0,0.0},{11,0.0,0.0,0.0,0.0,0.0,0.0},{12,0.0,0.0,0.0,0.0,0.0,0.0},{13,0.0,0.0,0.0,0.0,0.0,0.0},{14,0.0,0.0,0.0,0.0,0.0,0.0},{15,0.0,0.0,0.0,0.0,0.0,0.0}};
+				    	        			int counter2=0;
+				    	        			int aNumber=1;
+				    	        			int storage=0;
+				    	        			
+				    	        			//System.out.println("Lab" + "\t" + "S1" + "\t" + "S2" +"\t"+ "S3" + "\t" + "S4" +"\t"+ "S5" + "\t" + "S6"+ "\t" + "S7" + "\t" + "S8" +"\t"+ "S9" + "\t" + "S10" +"\t"+ "S11" + "\t" + "S12"+ "\t" + "S13" + "\t" + "S14" +"\t"+ "S15" + "\t" + "S16" +"\t"+ "S17" + "\t" + "S18");
+				    	        			Scanner LabNumber=new Scanner(System.in);
+				    	        			System.out.println("What is the number of the assignment you would like to change?");
+				    	        			int a=LabNumber.nextInt();
+				    	        			Scanner score=new Scanner(System.in);
+				    	        			System.out.println("What would you like to change the score of the student to?");
+				    	        			int scoreread=score.nextInt();
+				    	        			ArrayStore[a][i]=scoreread;
+				    	        			Scanner average=new Scanner(System.in);
+				    	        			System.out.println("What is the ID of the student you want to find the average for?");
+				    	        			int averageread=average.nextInt();
+				    	        			double sumGrade = 0;
+				    	        			int countGrade=0;
+				    	        			double averageGrade = 0;
+				    	        			for(int x = 0; x<ArrayStore.length; x++){
+				    	        				for(int y = 0; y < ArrayStore[x].length; y++){
+				    	        					sumGrade += ArrayStore[x][y];
+				    	        					if(ArrayStore[x][averageread] != 0){
+				    	        						countGrade++;
+				    	        					}
+				    	        				}
+				    	        			}
+				    	        			if(countGrade == 0){
+				    	        				averageGrade = 100;
+				    	        			}
+				    	        			averageGrade = sumGrade/countGrade;
+				    	        			System.out.println("Grade: "+averageGrade+ "%");
+				    	        			//TotalTotal=(ArrayStore[1][averageread]+ArrayStore[2][averageread]+ArrayStore[3][averageread]+ArrayStore[4][averageread]+ArrayStore[5][averageread]+ArrayStore[6][averageread]+ArrayStore[7][averageread]+ArrayStore[8][averageread]+ArrayStore[9][averageread]+ArrayStore[10][averageread]+ArrayStore[11][averageread]+ArrayStore[12][averageread]+ArrayStore[12][averageread]+ArrayStore[13][averageread]+ArrayStore[14][averageread])/15;
+				    	        			System.out.println("You are ready to go...");
+				    	        			System.out.println("Lab" + "\t" + "S1" + "\t" + "S2" +"\t"+ "S3" + "\t" + "S4" +"\t"+ "S5" + "\t" + "S6"+ "\t" + "S7" + "\t" + "S8" +"\t"+ "S9" + "\t" + "S10" +"\t"+ "S11" + "\t" + "S12"+ "\t" + "S13" + "\t" + "S14" +"\t"+ "S15" + "\t" + "S16" +"\t"+ "S17" + "\t" + "S18");
+				    	        			display1(ArrayStore);
+				    	        			//System.out.println("The average for student ID: "+averageread+" is "+TotalTotal+" percent");
+				    	        		}
+								}
+								}
+	    	        		}
+	    	        		 }
+	    		}
+	    	  Scanner exit=new Scanner(System.in);
+	    	  System.out.println("Would you like to exit the program 1=Yes, 2=No");
+	    	  
+	    	  int exitread=exit.nextInt();
+	    	  
+	    	  if (exitread==1){
+	    		  System.out.println("Ok, have a nice day...");
+	    		  counterwhole++;
+	    		  
+	    		 
+	    		  
+	    	   if (exitread==2){
+	    		  System.out.println("Here we go once again...");
+	    		  
+	    	  }
+	    	  }
+	    	        	
+	    	        	
+	    	        
+	    		
+	    			
+	    	  else {
+	    		  	System.out.println("Invalid user input.");
+	    	        		}	
+	    	
+	    	
+	    	}
+	  	}
+	        
+	    public static void display1 (double x [][]){
+
+	    	for(int row=0;row <x.length;row++){
+	    	       for(int column=0;column < x[row].length;column++){
+	    	       System.out.print( x[row][column]+"\t");
+	    	       }
+	    	       System.out.println();
+
+
+	    	}
+
+	    	}
+	    	
+	    
+	    
+	    public static void display (String x [][]){
+	        for(int row=0;row <x.length;row++){
+	            for(int column=0;column < x[row].length;column++){
+	                System.out.print(x[row][column]+"\t");
+	            }
+	            System.out.println();
+	        }
+	    }
+	  
+}
+	    
