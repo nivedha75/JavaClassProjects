@@ -1,0 +1,118 @@
+import java.util.ArrayList;
+import java.util.*;
+import java.util.Scanner;
+import java.util.Random;
+
+public class Int{
+	
+	static Scanner reader=new Scanner(System.in);
+	static ArrayList<String> array=new ArrayList<String>();
+	
+	
+	public static void main(String[] args){
+		int j=0;
+		int counter=0;
+		String movieSeats[][]={{"Seats:","1","2","3","4","5","6","7","8","9","10"},{" A: ","O","O","O","O","O","O","O","O","O","O"},{" B: ","O","O","O","O","O","O","O","O","O","O"},{" C: ","O","O","O","O","O","O","O","O","O","O"},{" D: ","O","O","O","O","O","O","O","O","O","O"},{" E: ","O","O","O","O","O","O","O","O","O","O"},{" F: ","O","O","O","O","O","O","O","O","O","O"},{" G: ","O","O","O","O","O","O","O","O","O","O"},{" H: ","O","O","O","O","O","O","O","O","O","O"}};
+		
+		System.out.println("I have created a program for storing dates for upcoming movies.");
+		System.out.println("By entering a certain movie you will have the ability to book tickets.");
+		System.out.println("B means that the seats have already been booked, O means the seats are open.");
+		while (counter==0){
+		Scanner scan =new Scanner(System.in);
+		
+		Scanner movieTime=new Scanner(System.in);
+		System.out.println("What movie would you like to watch and see availability of tickets for?");
+		
+		String movieRead=movieTime.nextLine();
+		
+		System.out.println("Looks like you want to watch "+movieRead+", lets check the availability...");
+		display(movieSeats);
+		
+		Scanner ask=new Scanner(System.in);
+		System.out.println("Would you like to book seats, 1=Yes 2=No");
+		
+		int askRead=ask.nextInt();
+		
+		if (askRead==2){
+			System.out.println("Ok then..."); //Edit this code
+		}
+		else if(askRead==1){
+			//Scanner whichRow=new Scanner(System.in);
+			//System.out.println("Which row would you like to book in? 1 for A, 2 for B, 3 for C, and so on...");
+			randomMethod();
+			//int whichRowRead=whichRow.nextInt();
+			
+			//Scanner whichColumn=new Scanner(System.in);
+			//System.out.println("Which seat number would you like to take?");
+			
+			//int whichColumnRead=whichColumn.nextInt();
+			
+			//movieSeats[whichRowRead][whichColumnRead]="B";
+			//System.out.println("Great! You have booked your seats for "+movieRead+", you were charged $14, enjoy!!!");
+			//display(movieSeats);
+			
+			System.out.println("Please manually enter your information so we can check for proof of purchase at the theater, type in exit once done");
+			String in=reader.nextLine();
+			
+			while (in != "exit"){
+				array.add(in);
+				in=reader.nextLine();
+				
+			}
+			PrintArray();
+		}
+			Scanner leave=new Scanner(System.in);
+			System.out.println("Do you want to purchase another movie ticket? 1=Yes 2=No.");
+			
+			int leaveRead=leave.nextInt();
+			
+			if (leaveRead==2){
+				System.out.println("Ok then...");
+				counter++;
+				
+			}
+			else if (leaveRead==1){
+				System.out.println("Great! Let's get more tickets!!");
+			}
+		}
+		
+	
+	
+	}
+	public static void display(String x[][]) {
+		for (int row = 0; row < x.length; row++) {
+			for (int column = 0; column < x[row].length; column++) {
+				System.out.print(x[row][column] + "\t");
+			}
+			System.out.println();
+		}
+	}
+	public static void PrintArray(){
+		System.out.println("----------------------------");
+		for (String i: array){
+			System.out.println(i);
+		}
+	}
+	public static void randomMethod(){
+		int k=2;
+		int j=0;
+		String movieSeats[][]={{"Seats:","1","2","3","4","5","6","7","8","9","10"},{" A: ","O","O","O","O","O","O","O","O","O","O"},{" B: ","O","O","O","O","O","O","O","O","O","O"},{" C: ","O","O","O","O","O","O","O","O","O","O"},{" D: ","O","O","O","O","O","O","O","O","O","O"},{" E: ","O","O","O","O","O","O","O","O","O","O"},{" F: ","O","O","O","O","O","O","O","O","O","O"},{" G: ","O","O","O","O","O","O","O","O","O","O"},{" H: ","O","O","O","O","O","O","O","O","O","O"}};
+		Scanner random=new Scanner (System.in);
+		System.out.println("How many people are you booking the tickets for?");
+		int randomRead=random.nextInt();
+		for(int i=0;i<10;i++){
+			if (i==randomRead){
+				System.out.println("You chose "+i+" seats to book.");
+				Scanner whichRow=new Scanner(System.in);
+				System.out.println("Which row would you like to book in? 1 for A, 2 for B, 3 for C, and so on...");
+				
+				int whichRowRead=whichRow.nextInt();
+				while (j!=i){
+				movieSeats[whichRowRead][k+j++]="B";
+				
+				}
+				display(movieSeats);
+			}
+		}
+	}
+}
