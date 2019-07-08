@@ -1,0 +1,138 @@
+package swingTests;
+
+import java.awt.Font;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class MeaningfulArrangement1 extends JFrame implements ActionListener{
+	//These are all attributes
+	static JButton answer1;
+	static JButton answer2;
+	static JButton answer3;
+	static JButton answer4;
+	static JButton restart;
+	static JFrame frame; 
+	static JPanel panel; 
+	static JLabel result;
+	
+	//This is the main()
+	public static void main(String[] args) {
+		new MeaningfulArrangement1();
+
+		
+	}
+	
+	//This is the constructor. It initializes all of the objects
+	public MeaningfulArrangement1() {
+		frame = new JFrame();
+		frame.setSize(500, 500);
+		frame.setTitle("Final");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		frame.setResizable(false);
+		
+		panel = new JPanel();
+		panel.setLayout(null);
+		frame.add(panel);
+		
+		JLabel question = new JLabel("What is 1+1?");
+		question.setFont(new Font("Times New Roman", Font.PLAIN, 30));
+		panel.add(question);
+		question.setBounds(144, 5, 290, 100);
+		
+		answer1 = new JButton("1");
+		answer1.addActionListener(this);
+		panel.add(answer1);
+		answer1.setBounds(80, 150, 140, 100);
+		answer1.setToolTipText("Click to see result");
+		
+		answer2 = new JButton("2");
+		panel.add(answer2);
+		answer2.addActionListener(this);
+		answer2.setBounds(240, 270, 140, 100);
+		answer2.setToolTipText("Click to see result");
+		
+		answer3 = new JButton("Window");
+		panel.add(answer3);
+		answer3.addActionListener(this);
+		answer3.setBounds(240, 150, 140, 100);
+		answer3.setToolTipText("Click to see result");
+		
+		answer4 = new JButton("11");
+		panel.add(answer4);
+		answer4.addActionListener(this);
+		answer4.setBounds(80, 270, 140, 100);
+		answer4.setToolTipText("Click to see result");
+		
+		restart = new JButton("Restart");
+		panel.add(restart);
+		restart.addActionListener(this);
+		restart.setBounds(185, 395, 90, 40);
+		restart.setToolTipText("Restarts program");
+		restart.setEnabled(false);
+	}
+
+	//This is the actionPerformed(). It basically tells the program what it will do if the user does anything in the panel
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == answer1) {
+			result = new JLabel("Incorrect!");
+			panel.add(result);
+			result.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+			result.setBounds(186, 50, 290, 100);
+			
+			answer1.setEnabled(false);
+			answer2.setEnabled(false);
+			answer3.setEnabled(false);
+			answer4.setEnabled(false);
+			restart.setEnabled(true);
+		}
+		else if (e.getSource() == answer2) {
+			result = new JLabel("Good job!");
+			panel.add(result);
+			result.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+			result.setBounds(186, 50, 290, 100);
+			
+			answer1.setEnabled(false);
+			answer2.setEnabled(false);
+			answer3.setEnabled(false);
+			answer4.setEnabled(false);
+		}
+		else if (e.getSource() == answer3) {
+			result = new JLabel("Incorrect!");
+			panel.add(result);
+			result.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+			result.setBounds(186, 50, 290, 100);
+			
+			answer1.setEnabled(false);
+			answer2.setEnabled(false);
+			answer3.setEnabled(false);
+			answer4.setEnabled(false);
+			restart.setEnabled(true);
+		}
+		else if(e.getSource() == answer4) {
+			result = new JLabel("Incorrect!");
+			panel.add(result);
+			result.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+			result.setBounds(186, 50, 290, 100);
+			
+			answer1.setEnabled(false);
+			answer2.setEnabled(false);
+			answer3.setEnabled(false);
+			answer4.setEnabled(false);
+			restart.setEnabled(true);
+		}
+		
+		else if (e.getSource() == restart) {
+			buildScreen();
+		}
+	}
+	
+	private void buildScreen() {
+		result.setVisible(false);
+		answer1.setEnabled(true);
+		answer2.setEnabled(true);
+		answer3.setEnabled(true);
+		answer4.setEnabled(true);
+		restart.setEnabled(false);
+	}
+}
