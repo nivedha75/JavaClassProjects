@@ -1,0 +1,47 @@
+package jjj;
+import java.awt.FlowLayout;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.awt.event.*;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.*;
+import java.awt.*;
+
+public class ImageTest extends JFrame {
+	
+	static JPanel panel = new JPanel();
+	static JLabel background = new JLabel();
+	static JButton function = new JButton();
+	static JLayeredPane pane = new JLayeredPane();
+	
+	public static void main(String avg[]) throws Exception {
+	  new ImageTest();
+  }
+	
+  public ImageTest() throws IOException {
+	  this.setTitle("Test");
+	  this.setVisible(true);
+	  this.setSize(500, 400);
+	  this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+	  
+	  background.setIcon(new ImageIcon("C:\\Users\\siddh\\OneDrive\\Pictures\\Pictures for NINTENDO-main()-IA\\Completed\\yes.jpg"));
+	  panel.add(background);
+	  this.add(panel);
+
+      pane.setPreferredSize(new Dimension(300, 300));
+      pane.add(background, new Integer(50));
+      pane.add(function, new Integer(100));
+      this.add(pane);
+      background.setBounds(0, 0, getWidth(), getHeight());
+      function.setBounds(300, 210, 120, 80);
+      function.setContentAreaFilled(false);
+      //function.setBorderPainted(false);
+      function.setRolloverEnabled(true);
+      function.setToolTipText("Go to sleep");
+	  validate();
+  }
+}
