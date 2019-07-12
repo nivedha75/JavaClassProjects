@@ -1,0 +1,81 @@
+package caveprojswing;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class TitleScreen extends JFrame implements ActionListener{
+	
+	static JLabel background = new JLabel();
+	static JLayeredPane layeredpane = new JLayeredPane();
+	static JPanel panel = new JPanel();
+	static JButton start = new JButton();
+	static JButton exit = new JButton();
+	static Username username= new Username();
+	static JTextArea textfield = new JTextArea();
+	static JScrollPane scroll = new JScrollPane(textfield, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+	static JButton go = new JButton();
+		
+	public static void main(String[] args) {
+		new TitleScreen();
+	}
+	
+	public TitleScreen() {
+		this.setTitle("TITLE SCREEN");
+		this.setSize(500, 500);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		background.setIcon(new ImageIcon("C:\\Users\\siddh\\OneDrive\\Pictures\\Pictures for NINTENDO-main()-IA\\Completed\\CaveProj title screen.jpg"));
+		panel.add(background);
+		this.add(panel);
+		
+		layeredpane.setPreferredSize(new Dimension(300, 300));
+		layeredpane.add(background, new Integer(50));
+		layeredpane.add(start, new Integer(100));
+		layeredpane.add(exit, new Integer(100));
+		layeredpane.add(textfield, new Integer(100));
+		layeredpane.add(go, new Integer(100));
+		this.add(layeredpane);
+		
+		background.setBounds(0, 0, getWidth(), getHeight());
+		
+		start.setBounds(25, 185, 180, 40);
+		start.setContentAreaFilled(false);
+		start.setBorderPainted(false);
+		start.addActionListener(this);
+		
+		exit.setBounds(25, 210, 80, 40);
+		exit.setContentAreaFilled(false);
+		exit.setBorderPainted(false);
+		exit.addActionListener(this);
+		
+		validate();
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==start){
+			username();
+		}
+		
+		if(e.getSource()==exit) {
+			System.exit(0);
+		}
+	}
+	
+	public void username() {
+		background.setIcon(new ImageIcon("C:\\Users\\siddh\\OneDrive\\Pictures\\Pictures for NINTENDO-main()-IA\\Completed\\Username select.jpg"));
+		textfield.setBounds(145, 200, 190, 51);
+		textfield.setLineWrap(true);
+		textfield.setWrapStyleWord(true);
+		textfield.setFont(new Font("Fondamento", Font.PLAIN, 32));
+		
+		start.setEnabled(false);
+		exit.setEnabled(false);
+		
+		go.setBounds(322, 300, 110, 40);
+		go.setFont(new Font("Fondamento", Font.PLAIN, 30));
+		go.setContentAreaFilled(false);
+		go.setBorderPainted(false);
+	}
+}
